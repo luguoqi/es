@@ -45,10 +45,10 @@ public class ElasticsearchConfig {
     static {
         RequestOptions.Builder builder = RequestOptions.DEFAULT.toBuilder();
 //        builder.addHeader("Authorization", "Bearer " + TOKEN);//每次请求之前带上请求头信息，比如令牌
-        builder.setHttpAsyncResponseConsumerFactory(
-                new HttpAsyncResponseConsumerFactory
-                        .HeapBufferedResponseConsumerFactory(30 * 1024 * 1024 * 1024)
-        );//异步相关，定义响应消费者
+//        builder.setHttpAsyncResponseConsumerFactory(
+//                new HttpAsyncResponseConsumerFactory
+//                        .HeapBufferedResponseConsumerFactory(30 * 1024 * 1024 * 1024)
+//        );//异步相关，定义响应消费者
         COMMON_OPTIONS = builder.build();
     }
 
